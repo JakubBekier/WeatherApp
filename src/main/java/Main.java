@@ -1,24 +1,14 @@
-import okhttp3.*;
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        String key = "713d261e9b3a42dc8b8ed7145689eee8";
+
 
         InputPanel inputPanel = new InputPanel();
         OutputPanel outputPanel = new OutputPanel();
-        AppFrame frame = new AppFrame(inputPanel.panel);
+        AppFrame frame = new AppFrame();
 
 
-        inputPanel.inputButton.addActionListener(new ActionListener() {
+        /*inputPanel.inputButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 OkHttpClient client = new OkHttpClient();
@@ -43,17 +33,16 @@ public class Main {
                     }
                 });
                 }
-        });
+        });*/
 
-        outputPanel.goBackButton.addActionListener(new ActionListener() {
+                /*outputPanel.goBackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 frame.changePanel(inputPanel.panel);
             }
-        });
+        });*/
 
-
-        frame.changePanel(inputPanel.panel);
+        //frame.changePanel(inputPanel.panel);
     }
 }

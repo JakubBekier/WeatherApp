@@ -6,19 +6,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 
-public class InputPanel {
-    public JPanel panel;
+public class InputPanel extends JPanel {
     public JLabel inputLabel;
     public JTextField textField;
     public JButton inputButton;
 
     public InputPanel(){
-        this.panel = new JPanel();
+        super();
+
         this.inputLabel = new JLabel("Enter a city name");
         this.textField = new JTextField("Warsaw", 20);
         this.inputButton = new JButton("Get weather");
 
-        this.panel.setLayout(null);
+        this.setLayout(null);
 
         this.inputLabel.setBounds(new Rectangle(135, 50, 140, 100));
         this.inputLabel.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 15));
@@ -26,11 +26,11 @@ public class InputPanel {
         this.textField.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 18));
         this.inputButton.setBounds(new Rectangle(140, 200, 120, 50));
 
-        this.panel.add(inputLabel);
-        this.panel.add(textField);
-        this.panel.add(inputButton);
+        this.add(inputLabel);
+        this.add(textField);
+        this.add(inputButton);
 
-        this.panel.setVisible(true);
+        this.setVisible(true);
 
     }
 

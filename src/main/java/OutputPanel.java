@@ -6,36 +6,25 @@ import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class OutputPanel {
-    public JPanel panel;
-    public JLabel cityLabel;
-    public JLabel skyLabel;
-    public JLabel tempAvgLabel;
-    public JLabel tempMinLabel;
-    public JLabel tempMaxLabel;
-    public JLabel tempApparentLabel;
-    public JLabel pressureLabel;
-    public JLabel humidityLabel;
-    public JLabel windLabel;
-    public JButton goBackButton;
-    public GridBagLayout grid;
+
+public class OutputPanel extends JPanel {
+    public JLabel cityLabel = new JLabel();
+    public JLabel skyLabel = new JLabel();
+    public JLabel tempAvgLabel = new JLabel();
+    public JLabel tempMinLabel = new JLabel();
+    public JLabel tempMaxLabel = new JLabel();
+    public JLabel tempApparentLabel = new JLabel();
+    public JLabel pressureLabel = new JLabel();
+    public JLabel humidityLabel = new JLabel();
+    public JLabel windLabel = new JLabel();
+    public JButton goBackButton = new JButton("Go back");
+    public GridBagLayout grid = new GridBagLayout();
     public GridBagConstraints gbc;
 
     public OutputPanel(){
-        this.panel = new JPanel();
+        super();
 
-        this.cityLabel = new JLabel();
-        this.skyLabel = new JLabel();
-        this.tempAvgLabel = new JLabel();
-        this.tempMinLabel = new JLabel();
-        this.tempMaxLabel = new JLabel();
-        this.tempApparentLabel = new JLabel();
-        this.pressureLabel = new JLabel();
-        this.humidityLabel = new JLabel();
-        this.windLabel = new JLabel();
-        this.goBackButton = new JButton("Go back");
-        this.grid = new GridBagLayout();
-        this.panel.setLayout(grid);
+        this.setLayout(grid);
         this.gbc = new GridBagConstraints();
         this.prepareGrid();
 
@@ -50,46 +39,46 @@ public class OutputPanel {
         this.gbc.gridy = 0;
         this.gbc.ipadx = 20;
         this.gbc.ipady = 10;
-        this.panel.add(this.cityLabel, this.gbc);
+        this.add(this.cityLabel, this.gbc);
 
         this.gbc.gridx = 1;
         this.gbc.gridy = 0;
-        this.panel.add(this.windLabel,this.gbc);
+        this.add(this.windLabel,this.gbc);
 
         this.gbc.gridx = 0;
         this.gbc.gridy = 1;
-        this.panel.add(this.tempAvgLabel, this.gbc);
+        this.add(this.tempAvgLabel, this.gbc);
 
         this.gbc.gridx = 1;
         this.gbc.gridy = 1;
-        this.panel.add(this.tempMinLabel, this.gbc);
+        this.add(this.tempMinLabel, this.gbc);
 
         this.gbc.gridx = 0;
         this.gbc.gridy = 2;
-        this.panel.add(this.tempMaxLabel, this.gbc);
+        this.add(this.tempMaxLabel, this.gbc);
 
         this.gbc.gridx = 1;
         this.gbc.gridy = 2;
-        this.panel.add(this.tempApparentLabel, this.gbc);
+        this.add(this.tempApparentLabel, this.gbc);
 
         this.gbc.gridx = 0;
         this.gbc.gridy = 3;
-        this.panel.add(this.pressureLabel, this.gbc);
+        this.add(this.pressureLabel, this.gbc);
 
         this.gbc.gridx = 1;
         this.gbc.gridy = 3;
-        this.panel.add(this.humidityLabel, this.gbc);
+        this.add(this.humidityLabel, this.gbc);
 
         this.gbc.gridx = 0;
         this.gbc.gridy = 4;
         this.gbc.gridwidth = 2;
-        this.panel.add(this.skyLabel, this.gbc);
+        this.add(this.skyLabel, this.gbc);
 
         this.gbc.gridx = 0;
         this.gbc.gridy = 5;
         this.gbc.ipady = 10;
         this.gbc.gridwidth = 2;
-        this.panel.add(this.goBackButton, this.gbc);
+        this.add(this.goBackButton, this.gbc);
 
     }
 
